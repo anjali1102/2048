@@ -21,7 +21,9 @@ function App() {
               How to play →
             </a>
           </p>
-          <a className="restart-button">New Game</a>
+          <a className="restart-button" onClick={()=>window.location.reload()}>
+            New Game
+          </a>
         </div>
 
         <GameContainer />

@@ -15,9 +15,10 @@ const emptyGrid = emptyBoard();
 
 const GameContainer = () => {
   const [grid, setGrid] = useState(randomGenerator(emptyGrid));
+  // const [score, setScore] = useState(0);
 
   // console.log("emptyGrid", emptyGrid);
-  console.log("randomGenerator", randomGenerator(emptyGrid));
+  // console.log("randomGenerator", randomGenerator(emptyGrid));
 
   useEffect(() => {
     window.addEventListener("keydown", onKeyDown);
@@ -34,7 +35,9 @@ const GameContainer = () => {
   };
 
   const left = () => {
+    // const { score , } = useScore();
     const newGrid = moveLeft(grid);
+    // console.log("score", score);
     setGrid(randomGenerator(newGrid));
     checkEndGame();
   };
@@ -59,18 +62,17 @@ const GameContainer = () => {
 
   const checkEndGame = () => {
     if (checkWin(grid)) {
-      window.prompt("You win ! 🎉");
+      window.confirm("You win ! 🎉");
     } else if (isOver(grid)) {
-      window.prompt("Game Over !");
+      console.error("Game over");
+      window.confirm("Game Over !");
     }
   };
 
   // will extract this to separate file
   const onKeyDown = (e) => {
-    console.log("e", e, e.key);
     switch (e.key) {
       case "ArrowLeft":
-        console.log("onkeyDown");
         left();
         break;
       case "ArrowRight":
@@ -88,6 +90,7 @@ const GameContainer = () => {
 
   return (
     <div>
+      score
       <div className="grid-container">
         {grid.map((Eachrow, RowIndex) => {
           return (
