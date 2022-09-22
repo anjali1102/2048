@@ -1,11 +1,12 @@
 .grid-container {
-  margin-top: 50px;
+  margin: 3vw 30vw;
   background-color: #bbada0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 4px;
+  border-radius: 5px;
 }
 
 .eachRow {

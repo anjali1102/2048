@@ -90,7 +90,6 @@ const GameContainer = () => {
 
   return (
     <div>
-      score
       <div className="grid-container">
         {grid.map((Eachrow, RowIndex) => {
           return (
