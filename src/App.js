@@ -1,25 +1,7 @@
-import { useEffect, useState } from "react";
 import "./App.css";
+import GameContainer from "./components/GameContainer/GameContainer";
 
 function App() {
-  const gridIntialValue = [
-    [0, 0, 0, 0],
-    [1, 1, 1, 1],
-    [2, 2, 2, 2],
-    [3, 3, 3, 3],
-  ];
-  const [grid, setGrid] = useState(gridIntialValue);
-
-
-  const GridCell = ({ num }) => {
-    return <div className="grid-cell">{num}</div>;
-  };
-
-  // useEffect(()=>{
-    // random()
-
-  // },[])
-
   return (
     <div className="App">
       <div className="container">
@@ -43,26 +25,7 @@ function App() {
           <a className="restart-button">New Game</a>
         </div>
 
-        <div className="game-container">
-
-          <div className="grid-container">
-            {grid.map((row, oneIndex) => {
-              return (
-                <div
-                  className="grid-row"
-                  style={{ display: "flex" }}
-                  key={oneIndex}
-                >
-                  {row.map((digit, index) => (
-                    <GridCell num={digit} key={index}></GridCell>
-                  ))}
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="title-container"></div>
-        </div>
+        <GameContainer />
       </div>
     </div>
   );
