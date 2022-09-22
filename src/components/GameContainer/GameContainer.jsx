@@ -29,7 +29,7 @@ const GameContainer = () => {
 
   const Cell = ({ number }) => {
     return (
-      <div className={`cell cell- ${number}`}>{number > 0 ? number : ""}</div>
+      <div className={`cell cell-${number}`}>{number > 0 ? number : ""}</div>
     );
   };
 

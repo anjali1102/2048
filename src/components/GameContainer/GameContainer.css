@@ -23,3 +23,53 @@
   background-color: rgba(238, 228, 218, 0.35);
   border-radius: 5px;
 }
+
+.cell-2 {
+  background: #eee4da;
+  color: #776e75;
+}
+
+.cell-4 {
+  background: #eee1c9;
+  color: #776e75;
+}
+
+.cell-8 {
+  background: #f3b27a;
+  color: #f9f6f2;
+}
+
+.cell-16 {
+  background: #f69664;
+  color: #f9f6f2;
+}
+
+.cell-32 {
+  background: #f77c5f;
+  color: #f9f6f2;
+}
+
+.cell-64 {
+  background: #f75f3b;
+  color: #f9f6f2;
+}
+
+.cell-128 {
+  background: rgb(237, 207, 114);
+}
+
+.cell-256 {
+  background: rgb(237, 204, 97);
+}
+
+.cell-512 {
+  background: rgb(237, 200, 80);
+}
+
+.cell-1024 {
+  background: rgb(237, 197, 63);
+}
+
+.cell-2048 {
+  background: rgb(237, 194, 46);
+}
