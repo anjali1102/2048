@@ -1,15 +1,16 @@
 .grid-container {
+  margin-top: 50px;
   background-color: #bbada0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
   padding: 4px;
 }
 
 .eachRow {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 20vmin);
   grid-gap: 8px;
   padding: 4px;
   height: 100px;

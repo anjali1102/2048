@@ -87,19 +87,21 @@ const GameContainer = () => {
   };
 
   return (
-    <div className="grid-container">
-      {grid.map((Eachrow, RowIndex) => {
-        return (
-          <div key={RowIndex} className="eachRow">
-            {Eachrow.map((cell, ColumnIndex) => (
-              <Cell
-                key={`cell ${RowIndex}-${ColumnIndex}`}
-                number={cell}
-              ></Cell>
-            ))}
-          </div>
-        );
-      })}
+    <div>
+      <div className="grid-container">
+        {grid.map((Eachrow, RowIndex) => {
+          return (
+            <div key={RowIndex} className="eachRow">
+              {Eachrow.map((cell, ColumnIndex) => (
+                <Cell
+                  key={`cell ${RowIndex}-${ColumnIndex}`}
+                  number={cell}
+                ></Cell>
+              ))}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -8,9 +8,8 @@ function App() {
         <div className="heading">
           <h1 className="title">2048</h1>
           <div className="scores-container">
-            "60"
-            <div className="score-addition">+60</div>
-            <div className="best-container">"144"</div>
+            <div className="score-addition">SCORE</div>
+            <div className="best-container"></div>
           </div>
         </div>
 
