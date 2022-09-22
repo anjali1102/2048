@@ -59,6 +59,7 @@ const transposeMatrix = (grid) => {
       }
     }
   }
+  console.log("return from transpose", newGrid)
   return newGrid;
 };
 

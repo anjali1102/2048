@@ -66,16 +66,18 @@ const GameContainer = () => {
 
   // will extract this to separate file
   const onKeyDown = (e) => {
+    console.log("e", e, e.key);
     switch (e.key) {
-      case "ARROW_LEFT":
+      case "ArrowLeft":
+        console.log("onkeyDown");
         left();
         break;
-      case "ARROW_RIGHT":
+      case "ArrowRight":
         right();
         break;
-      case "ARROW_UP":
+      case "ArrowUp":
         up();
-      case "ARROW_DOWN":
+      case "ArrowDown":
         down();
         break;
 
