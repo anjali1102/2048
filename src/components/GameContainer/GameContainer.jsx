@@ -9,6 +9,7 @@ import {
   moveUp,
   randomGenerator,
 } from "../GameActions/GameActions";
+import "./GameContainer.css";
 
 const emptyGrid = emptyBoard();
 
@@ -89,10 +90,10 @@ const GameContainer = () => {
     <div className="grid-container">
       {grid.map((Eachrow, RowIndex) => {
         return (
-          <div key={RowIndex} className="eachRowDiv">
+          <div key={RowIndex} className="eachRow">
             {Eachrow.map((cell, ColumnIndex) => (
               <Cell
-                key={`cell-${RowIndex}-${ColumnIndex}`}
+                key={`cell ${RowIndex}-${ColumnIndex}`}
                 number={cell}
               ></Cell>
             ))}

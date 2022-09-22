@@ -1,0 +1,25 @@
+.grid-container {
+  background-color: #bbada0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 4px;
+}
+
+.eachRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+  padding: 4px;
+  height: 100px;
+}
+
+.cell {
+  padding: 10px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(238, 228, 218, 0.35);
+  border-radius: 5px;
+}
