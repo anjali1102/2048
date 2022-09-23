@@ -8,7 +8,7 @@ function App() {
         <div className="heading">
           <h1 className="title">2048</h1>
           <div className="scores-container">
-            <div className="score-addition">SCORE</div>
+            <div className="score-addition"></div>
             <div className="best-container"></div>
           </div>
         </div>
@@ -21,7 +21,10 @@ function App() {
               How to play →
             </a>
           </p>
-          <a className="restart-button" onClick={()=>window.location.reload()}>
+          <a
+            className="restart-button"
+            onClick={() => window.location.reload()}
+          >
             New Game
           </a>
         </div>
