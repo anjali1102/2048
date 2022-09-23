@@ -11,14 +11,15 @@ import {
 } from "../GameActions/GameActions";
 import "./GameContainer.css";
 
-// const emptyGrid = emptyBoard();
+
+const Cell = ({ number }) => {
+  return (
+    <div className={`cell cell-${number}`}>{number > 0 ? number : ""}</div>
+  );
+};
 
 const GameContainer = () => {
   const [grid, setGrid] = useState(randomGenerator(emptyBoard()));
-  // const [score, setScore] = useState(0);
-
-  // console.log("emptyGrid", emptyGrid);
-  // console.log("randomGenerator", randomGenerator(emptyGrid));
 
   useEffect(() => {
     window.addEventListener("keydown", onKeyDown);
@@ -28,16 +29,15 @@ const GameContainer = () => {
     };
   });
 
-  const Cell = ({ number }) => {
-    return (
-      <div className={`cell cell-${number}`}>{number > 0 ? number : ""}</div>
-    );
+  const checkEndGame = () => {
+    if (checkWin(grid)) {
+      window.confirm("You win ! 🎉");
+    } else if (isOver(grid)) {
+      window.confirm("Game Over !");
+    }
   };
-
   const left = () => {
-    // const { score , } = useScore();
     const newGrid = moveLeft(grid);
-    // console.log("score", score);
     setGrid(randomGenerator(newGrid));
     checkEndGame();
   };
@@ -60,16 +60,6 @@ const GameContainer = () => {
     checkEndGame();
   };
 
-  const checkEndGame = () => {
-    if (checkWin(grid)) {
-      window.confirm("You win ! 🎉");
-    } else if (isOver(grid)) {
-      // console.error("Game over");
-      window.confirm("Game Over !");
-    }
-  };
-
-  // will extract this to separate file
   const onKeyDown = (e) => {
     switch (e.key) {
       case "ArrowLeft":

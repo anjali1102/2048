@@ -20,7 +20,6 @@ const valueAvailable = (grid, value) => {
 };
 
 export const checkIfFull = (grid) => {
-  // console.log("!valueAvailable(grid, 0)", !valueAvailable(grid, 0));
   return !valueAvailable(grid, 0);
 };
 
@@ -66,9 +65,6 @@ const Mergevalues = (grid) => {
       if (grid[i][j] !== 0 && grid[i][j] === grid[i][j + 1]) {
         grid[i][j] = grid[i][j] * 2;
         grid[i][j + 1] = 0;
-        console.log("score", (grid[i][j] += grid[i][j]));
-        // score += grid[i][j];
-        // console.log("score=>", score);
       }
     }
   }
@@ -77,10 +73,7 @@ const Mergevalues = (grid) => {
 
 export const moveLeft = (grid) => {
   const newGrid1 = transposeMatrix(grid);
-  // console.log("newGrid1", newGrid1, newGrid1.size);
-
   const newGrid2 = Mergevalues(newGrid1);
-  // console.log("newGrid2", newGrid2, newGrid2.size);
   return transposeMatrix(newGrid2);
 };
 
