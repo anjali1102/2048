@@ -11,10 +11,10 @@ import {
 } from "../GameActions/GameActions";
 import "./GameContainer.css";
 
-const emptyGrid = emptyBoard();
+// const emptyGrid = emptyBoard();
 
 const GameContainer = () => {
-  const [grid, setGrid] = useState(randomGenerator(emptyGrid));
+  const [grid, setGrid] = useState(randomGenerator(emptyBoard()));
   // const [score, setScore] = useState(0);
 
   // console.log("emptyGrid", emptyGrid);
@@ -64,7 +64,7 @@ const GameContainer = () => {
     if (checkWin(grid)) {
       window.confirm("You win ! 🎉");
     } else if (isOver(grid)) {
-      console.error("Game over");
+      // console.error("Game over");
       window.confirm("Game Over !");
     }
   };
@@ -96,7 +96,7 @@ const GameContainer = () => {
             <div key={RowIndex} className="eachRow">
               {Eachrow.map((cell, ColumnIndex) => (
                 <Cell
-                  key={`cell ${RowIndex}-${ColumnIndex}`}
+                  key={`cell-${RowIndex}-${ColumnIndex}`}
                   number={cell}
                 ></Cell>
               ))}

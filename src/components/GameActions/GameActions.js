@@ -1,7 +1,6 @@
 //all function definitions here
 // getting invoked from GameContainer
 
-
 export const emptyBoard = () => [
   [0, 0, 0, 0],
   [0, 0, 0, 0],
@@ -19,7 +18,6 @@ const valueAvailable = (grid, value) => {
   }
   return false;
 };
-
 
 export const checkIfFull = (grid) => {
   // console.log("!valueAvailable(grid, 0)", !valueAvailable(grid, 0));
@@ -64,7 +62,7 @@ const transposeMatrix = (grid) => {
 
 const Mergevalues = (grid) => {
   for (let i = 0; i < grid.length; i++) {
-    for (let j = 0; j < grid.length; j++) {
+    for (let j = 0; j < grid[i].length - 1; j++) {
       if (grid[i][j] !== 0 && grid[i][j] === grid[i][j + 1]) {
         grid[i][j] = grid[i][j] * 2;
         grid[i][j + 1] = 0;
@@ -77,11 +75,11 @@ const Mergevalues = (grid) => {
   return grid;
 };
 
-export const moveLeft = (grid, score) => {
+export const moveLeft = (grid) => {
   const newGrid1 = transposeMatrix(grid);
   // console.log("newGrid1", newGrid1, newGrid1.size);
 
-  const newGrid2 = Mergevalues(newGrid1, score);
+  const newGrid2 = Mergevalues(newGrid1);
   // console.log("newGrid2", newGrid2, newGrid2.size);
   return transposeMatrix(newGrid2);
 };
