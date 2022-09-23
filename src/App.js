@@ -16,7 +16,7 @@ function App() {
         <div className="above-game">
           <p className="game-intro">
             "Join the tiles, get to "<strong>2048!</strong>
-            <br />
+            <div />
             <a href="/" className="how-to-play-link">
               How to play →
             </a>

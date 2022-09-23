@@ -79,7 +79,7 @@ const GameContainer = () => {
   };
 
   return (
-    <div>
+    <div className="grid-wrapper">
       <div className="grid-container">
         {grid.map((Eachrow, RowIndex) => {
           return (
