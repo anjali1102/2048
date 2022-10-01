@@ -70,6 +70,7 @@ const GameContainer = () => {
         break;
       case "ArrowUp":
         up();
+        break;
       case "ArrowDown":
         down();
         break;
